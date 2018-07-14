@@ -1,0 +1,35 @@
+<% include template/header %>
+    <div class="container">
+        <div class="jumbotron">
+          <h1 class="display-3">Xem Du Lieu</h1>
+          <p class="lead">tu mongdb</p>
+          <hr class="my-2">
+      </div>
+      <table class="table table-hover table-inverse">
+          <thead class="thead-inverse">
+              <tr>
+                  <th>Ten</th>
+                  <th>Phone</th>
+                  <th>Sua</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% data.forEach(function(motphantu){ %>
+                  <tr>
+                      <td scope="row"><%= motphantu.ten %></td>
+                      <td><%= motphantu.dt %></td>
+                      <td>
+                            <a  href = "/sua/<%= motphantu._id %>">
+                          <i class="fa fa-edit"></i> 
+                          </a> / 
+                      <a onclick ="return xoahaykhong('ban co chac chan xoa khong');"  href = "/xoa/<%= motphantu._id %>">
+                      <i class="fa fa-remove"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <% }) %>
+              </tbody>
+      </table>
+    </div>
+      
+<% include template/footer %>

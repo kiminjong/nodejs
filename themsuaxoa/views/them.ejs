@@ -1,0 +1,25 @@
+<% include template/header %>
+      <div class="container">
+          <div class="jumbotron">
+              <h1 class="display-3">Them moi du lieu</h1>
+              <p class="lead">Vao mongodb</p>
+              <hr class="my-2">
+          </div>
+        <form action="/them" method="post">
+            <div class="form-group">
+            <label for="ten">Ten</label>
+            <input type="text"
+                class="form-control" name="ten" id="" aria-describedby="helpId" placeholder="">
+            <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+            <div class="form-group">
+                <label for="dt">Phone</label>
+                <input type="text"
+                    class="form-control" name="dt" id="" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+            <button type="submit" class="btn btn-dark">Dang Ky</button>
+        </form>
+    </div>
+
+<% include template/footer %>
